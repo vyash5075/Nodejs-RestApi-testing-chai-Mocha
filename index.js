@@ -76,7 +76,7 @@ app.put("/api/tasks/:id", (request, response) => {
   task.name = request.body.name;
   task.completed = request.body.completed;
 
-  response.send(task);
+  response.status(201).send(task);
 });
 
 //PATCH
